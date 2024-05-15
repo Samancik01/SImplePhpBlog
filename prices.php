@@ -3,7 +3,7 @@ $title = 'Narxlar';
 require 'includes/header.php';
 ?>
 <div class="container py-3 mt-10">
-    <h1>Narxlar</h1>
+<h1>Narxlar</h1>
 <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
     <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm">

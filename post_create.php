@@ -1,9 +1,6 @@
 <?php
 $title = 'Post Yaratish';
 require 'includes/header.php';
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    var_dump($_POST);
-}
 ?>
 <div class="container py-4">
     <header class="pb-3 mb-4 border-bottom">
