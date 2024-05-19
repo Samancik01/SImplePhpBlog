@@ -1,6 +1,27 @@
 <?php
-$title = 'Post Yaratish';
-require 'includes/header.php';
+    $title = 'Post Yaratish';
+
+    require 'includes/header.php';
+    require 'config/database.php';
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        
+        $title = $_POST['title'];
+        $body = $_POST['body'];
+
+        $statement = $pdo->prepare("INSERT INTO posts (title, body) VALUES (:title, :body)");
+        $statement->execute([
+            'title' => $title,
+            'body' => $body
+        ]);
+
+        $_SESSION['post-yaratildi'] = 'Post muvaffaqiyatli yaratildi !';
+
+        header("Location: blog.php");
+
+
+    }
+
 ?>
 <div class="container py-4">
     <header class="pb-3 mb-4 border-bottom">
@@ -17,7 +38,7 @@ require 'includes/header.php';
         <form method="POST" action="" class="container-fluid py-5">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Sarlavha</label>
-                <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <input type="text" name="title" class="form-control" id="exampleFormControlInput1">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Matn</label>
