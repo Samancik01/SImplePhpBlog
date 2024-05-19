@@ -1,5 +1,5 @@
-<?php 
-$title = 'Bosh Sahifa'; 
+<?php
+$title = 'Bosh Sahifa';
 require 'includes/header.php';
 ?>
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
@@ -149,6 +149,6 @@ require 'includes/header.php';
 </div><!-- /.container -->
 
 
-<?php require 'includes/footer.php'?>
+<?php require 'includes/footer.php' ?>
 
 </html>
